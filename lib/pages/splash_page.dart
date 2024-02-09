@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'FLAMES.dart';
+
 void main() {
   runApp(SplashPage());
 }
@@ -59,7 +61,10 @@ class HomeScreen extends StatelessWidget {
 
             InkWell(
               onTap: (){
-                print("object");
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder:
+                        (context) => FLAMES()
+                    ));
               },
               child:Image.asset('assets/images/pen.jpeg',width: 200,height: 200,) ,)
             ,
